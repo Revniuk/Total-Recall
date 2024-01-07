@@ -308,3 +308,151 @@ console.log(newArrayWithEndAddition);
 const newArrayWithBeginningAddition = ['strawberry', ...connectedArrays];
 
 console.log(newArrayWithBeginningAddition);
+
+// ===== ACCESS =====
+const donutShop = [
+  [
+    'firecracker',
+    'chocolate',
+    'blueberry'
+  ],
+  [
+    ['orange', 'applecrumble'],
+    ['cream', 'peanutbutter', 'coconut']
+  ],
+  [
+    [
+      [
+        [
+          ['flavor of the week']
+        ], ['ihatethis']
+      ]
+    ]
+  ]
+];
+
+// Anthony wants applecrumble. Print please!
+
+const anthonyDonut = donutShop[1][0][1];
+console.log(`Anthony wants ${anthonyDonut}.`);
+
+// Tosi wants ihatethis. :) Print!
+const tosiDonut = donutShop[2][0][0][1][0][0]; // Corrected index for ihatethis
+console.log(`Tosi wants ${tosiDonut}.`);
+// =================================================
+//                     IF/ELSE
+// =================================================
+const teo = {
+  isPerson: true,
+  gender: 'male',
+  isHungry: 'hungry'
+};
+
+// Check if Teo is a person.
+if (teo.isPerson) {
+  console.log('Teo is a person!');
+  
+  // If Teo is a person, check to see if he is a male or a female.
+  if (teo.gender === 'male') {
+    console.log('You got it right!');
+    
+    // If male, check to see if Teo is hungry.
+    teo.isHungry === 'hungry' ? console.log("Let's buy Teo some tacos!") : console.log("He doesn't need to eat.");
+  } else {
+    console.log("Wrong. Teo is going to remove you from the class.");
+  }
+} else {
+  console.log('Teo is not a person!');
+}
+
+// Create an if/else ternary to check if Gustavo is the coolest.
+const gustavoIsCoolest = true;
+console.log(gustavoIsCoolest ? 'You got that right!' : 'James wants to argue. He says he\'s the best!');
+// =================================================
+//                     FUNCTIONS
+// =================================================
+
+// Don't forget to call your functions :)
+// Create a function called sayGreeting and PRINT 'Hello, ma'amsir!'
+function sayGreeting() {
+  console.log('Hello, ma\'amsir!');
+}
+
+// Call sayGreeting function
+sayGreeting();
+
+// Create a function that takes a string as a parameter.
+// PRINT 'This is my (STRING)'. Please replace the (STRING) with the parameter.
+// Don't play with me haha.
+function printString(myString) {
+  console.log(`This is my ${myString}`);
+}
+
+// Call printString function
+printString('parameter');
+
+// Create a function called add that takes in three number parameters.
+// Create 3 variables and assign numerical values to them.
+// Invoke your add() and pass in those three variables as arguments.
+function add(num1, num2, num3) {
+  const result = num1 + num2 + num3;
+  console.log(result);
+}
+
+// Call add function
+add(5, 10, 15);
+
+// Create a function called fightClub() that accepts a name parameter.
+// If the name matches specific values, return corresponding rules.
+// If anything else, return 'No shirts'.
+function fightClub(name) {
+  switch (name) {
+    case 'Ivan':
+      return '1st rule: You do not talk about Fight Club.';
+    case 'Stephan':
+      return '2nd rule: YOU DO NOT TALK ABOUT FIGHT CLUB.';
+    case 'Peter':
+      return '3rd rule: If someone yells "Stop!", goes limp, taps out, the fight is over.';
+    case 'Mattew':
+      return '4th rule: Only two guys to a fight.';
+    default:
+      return 'No shirts';
+  }
+}
+
+// Call fightClub function
+console.log(fightClub('Ivan'));
+console.log(fightClub('Stephan'));
+console.log(fightClub('Peter'));
+console.log(fightClub('Mattew'));
+console.log(fightClub('RandomName'));
+
+// Create a function called hello() that prints 'Hello'.
+// Return an anonymous function inside hello() and have it print 'Goodbye'.
+// Invoke your hello function in some way to see Hello and Goodbye in the console.
+function hello() {
+  console.log('Hello');
+  return function() {
+    console.log('Goodbye');
+  };
+}
+
+// Call hello function and its returned anonymous function
+const goodbyeFunction = hello();
+goodbyeFunction();
+
+// Create a function expression with your first name as the variable
+// and then print your first and last name
+const printFullName = function(firstName) {
+  const lastName = 'Revniuk'; 
+  console.log(`${firstName} ${lastName}`);
+};
+
+// Call printFullName function expression
+printFullName('Svitlana');
+
+// Create an arrow function that accepts a number and have it return that number doubled
+const doubleNumber = (number) => number * 2;
+
+// Call doubleNumber arrow function
+console.log(doubleNumber(5));
